@@ -1,3 +1,5 @@
+//functions using the azure package
+
 import ModelClient from "@azure-rest/ai-inference";
 import { AzureKeyCredential } from "@azure/core-auth";
 import dotenv from "dotenv";

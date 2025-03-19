@@ -7,10 +7,12 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 
+// test route
 app.get("/", (req, res) => {
   res.send("its working on port 7000");
 });
 
+// endpoint that converts the plain english to sql and returns the response in english
 app.post("/query", async (req, res) => {
   const { question } = req.body;
   if (!question) {
@@ -29,6 +31,7 @@ app.post("/query", async (req, res) => {
   }
 });
 
+// functions using the openai package
 
 // const token = process.env.GITHUB_AI_TOKEN;
 // const endpoint = "https://models.inference.ai.azure.com";
